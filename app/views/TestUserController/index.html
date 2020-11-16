@@ -1,0 +1,22 @@
+<h1 class="ui header">TP DAO</h1>
+<!--View associated to index action of TestUserController controller -->
+<div class="ui container">
+<table class="ui celled table">
+  <thead>
+    <tr><th>first name</th>
+    <th>Last name</th>
+    <th>email</th>
+    <th>organisations</th>
+  </tr></thead>
+  <tbody>
+  {%for u in users%}
+    <tr>
+      <td data-label="first name">{{u.firstname}}</td>
+      <td data-label="last name">{{u.lastname}}</td>
+      <td data-label="email">{{u.email}}</td>
+      <td data-label="organization">{{u.organization.name}}</td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+</div>
